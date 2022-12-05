@@ -1,0 +1,145 @@
+/**------First Mobile----------*/
+
+.contact {
+  background-color: #21216bac;
+  max-width: 1166px;
+  color:var(--text-color-inverse);
+  margin-top: 200px;
+  font-size: 18px;
+  border-radius: 14px;
+  padding: 25px;
+  display: grid;
+  gap:25px;
+  z-index: 999;
+  position: relative;
+  top: 180px;
+}
+.contact{
+  font-family: poppins;
+}
+.contact p ,
+.contact h2,
+.contact ul {
+  margin: 0;
+  padding: 0;
+}
+
+.title-contact{
+  text-align: center;
+  margin: 50px 50px;
+}
+.contact_tittle {
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact_details,
+.contact_form {
+  display: grid;
+  gap:20px
+}
+
+.contact_details_group,
+.contact_form_group {
+  display: grid;
+  gap:3px;
+}
+
+.contact_label{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.contact_form input,
+.contact_form textarea {
+  border-radius: 7px;
+  border:none;
+  height: 30px;
+  padding: 5px 10px;
+  background-color: #68649c;
+}
+.contact_form textarea {
+  height: auto;
+  resize: vertical;
+}
+.contact_form_submit {
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(45deg, #c860dd, #2954a3);
+  border-radius: 30px;
+  color: var(--text-color-inverse);
+  border: none;
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.contact_form_submit:hover{
+  box-shadow: rgb(255, 255, 255) 0px 1px 15px, rgb(255, 253, 253) 0px 1px 5px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  gap:25px;
+  justify-content: center;
+}
+.social-list img{
+ height: 40px;
+}
+
+.social-list img:hover{
+  filter: drop-shadow( 0 0 10px white);
+}
+/**------Desktop Version----------*/
+
+@media (min-width:950px) {
+  .contact {
+    font-size: 20px;
+    padding: 70px;
+    
+    max-width: 980px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+    position: relative;
+    top: 0px;
+     }
+  
+  
+  .contact_tittle {
+    font-size: 25px;
+    text-align: left;
+  }
+  
+  .social-list {
+    justify-content: flex-start;
+  }
+  .social-list img{
+   height: 40px;
+  }
+  .contact_form{
+    grid-area: form;
+  }
+  .social{
+    grid-area: social;
+  }
+  .contact_details{
+    grid-area: details;
+  }
+  .contact_tittle {
+    grid-area: tittle;
+  }
+  .contact{
+    display: grid;
+    grid: 
+    "tittle form" auto
+    "details form" 1fr
+    "social form" auto /
+      1fr     1fr;
+    align-items: start;
+  }
+
+  
+}

@@ -1,0 +1,30 @@
+/*---first mobile------*/
+
+.aboutme_img img {
+  max-width: 900px;
+}
+.aboutme_img {
+  display: flex;
+  justify-content: center;
+}
+.container_aboutme{
+  position: relative;
+}
+.text_aboutme {
+  max-width: 240px;
+  line-height: 25px;
+  font-size: 16px;
+  position: absolute;
+  left: 38%;
+  bottom: 39%;
+}
+.text_aboutme h2{
+  padding-bottom: 25px;
+}
+@media (min-width:696px){
+.text_aboutme{
+  left: 46%;
+  bottom: 40%;
+}
+
+}

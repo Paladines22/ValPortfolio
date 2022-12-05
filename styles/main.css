@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --defaul-background-color: #0f103f;
+  --primary-color: #1c1c65;
+  --tertiary-color: #2f2f8a;
+  --text-color-inverse: #ffffff;
+  --complementary-color: #b5f9fd;
+  --tertiary-text:gray;
+}
+html {
+  scroll-behavior: smooth;
+}
+section[id]{
+  scroll-margin-top: 120px;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--defaul-background-color);
+  color: var(--text-color-inverse);
+  padding-top: 70px;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color:var(--text-color-inverse)
+}
+.topheader {
+  position: fixed;
+  box-shadow: 0 4px 5px whitesmoke;
+  background-color: var(--defaul-background-color);
+  left: 0;
+  top:0;
+  width: 100%;
+  max-height: 65px;
+  z-index: 999999;
+}
+.topnav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  max-width: 1166px;
+  margin: 0 auto;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.logo img {
+  width: 70px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 0 40px;
+}
+.menu a {
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 70px;
+}
+.menu a{
+  padding: 5px 8px;
+}
+.menu a:hover{
+  background-color: var(--tertiary-color);
+  border-radius: 5px;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+@media (max-width:950px) {
+
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top:0;
+    width:100%;
+    align-items: center;
+    background-color: var(--tertiary-color);
+    height: 100%;
+    overflow-y: auto;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .menu li {
+    padding: 0;
+  }
+  .menu a {
+    color: white;
+    line-height: 90px;
+  }
+  
+  .open-menu,
+  .close-menu {
+    display: block;
+    border:none;
+    background: none;
+    cursor: pointer;
+  }
+  .close-menu {
+    align-self: flex-end;
+    padding: 20px 6px;
+  }
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
